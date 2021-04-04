@@ -5,7 +5,7 @@ $(function(){
     $(".rate-star").rateYo({
         rating: 5,
         starWidth: "12px",
-        readOnly: true
+        readOnly: false
       });
 
       $(".product-slider__inner").slick({
