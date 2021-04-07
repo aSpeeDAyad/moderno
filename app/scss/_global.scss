@@ -51,9 +51,42 @@ body{
     line-height: 60px;
 
 }
+.page-content{
+    background-color:$bg-cont;
+}
 .rate-star{
     display: inline-block;
     margin-right: 13px;
+}
+.breadcrumbs{
+    &__inner{
+        padding:47px 0px 42px
+    }
+    &__list{
+        li{
+            display: inline-block;
+            position: relative;
+            
+            &+li{
+                padding-left: 24px;
+                &::before{
+                    content: '-';
+                    color:$green;
+                    position: absolute;
+                    left: 8px;
+                }
+            }
+            a{
+                color:#b0bec5;
+            }
+            &:last-child{
+                a,span{
+                    color: $bg;
+                    cursor:default;
+                }
+            }
+        }
+    }
 }
 .wrapper {
     display: flex;
