@@ -18,6 +18,7 @@
     justify-content: space-around;
     height: 90px;
     align-items: center;
+    position: relative;
 }
 
 .header__box {
@@ -99,6 +100,30 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        &:hover{
+            .header__user-menu{
+                height:auto;
+            }
+        }
+
+        &-menu{
+            overflow: hidden;
+            border: 1px solid rgb(204,204,204);
+            position: absolute;
+            background-color: #fff;
+            width: 158px;
+            height: 0;
+            padding: 20px;
+            padding-top: 0;
+            top: 69px;
+            a{
+                font-size: 12px;
+                color: #546e7a;
+                line-height:28px;
+                margin-bottom: 15px;
+            }
+        }
 
         &-status {
             position: relative;
@@ -196,6 +221,7 @@
     }
 
 }
+
 
 // end header
 // start search
