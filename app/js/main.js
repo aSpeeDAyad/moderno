@@ -36,6 +36,19 @@ $(function(){
         $(".icon-th-large").toggleClass("active");
         
 
-    });
-
+    }); 
+  
+    
 }); 
+let btns = document.querySelectorAll(".header__btn-basket");
+btns.forEach((element) =>{
+    element.addEventListener('click',()=>{
+        element.classList.toggle('active-menu');
+    })
+});
+document.querySelectorAll(".header__user").forEach((element) =>{
+    element.addEventListener('click',()=>{
+        element.classList.toggle('active-menu');
+    })
+});
+

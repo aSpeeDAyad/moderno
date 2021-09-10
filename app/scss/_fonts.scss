@@ -32,7 +32,18 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+  .icon-bell-o:before {
+    content: "\e900";
+  }
+  .icon-cart:before {
+    content: "\e93a";
+  }
+  .icon-cart:before {
+    content: "\e93a";
+  }
+  .icon-envelop:before {
+    content: "\e945";
+  }
   .icon-search1:before {
     content: "\f002";
   }
