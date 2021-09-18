@@ -41,11 +41,27 @@ $(function(){
     
 }); 
 let btns = document.querySelectorAll(".header__btn-basket");
-btns.forEach((element) =>{
-    element.addEventListener('click',()=>{
-        element.classList.toggle('active-menu');
-    })
+let svg = document.querySelectorAll(".svg-menu");
+
+svg.forEach((element) =>{
+    element.addEventListener('click',(e)=>{
+        element.parentElement.classList.toggle('active-menu'); 
+        element.parentElement.classList.toggle('svg-red');
+    });    
 });
+
+btns.forEach((element) =>{
+    element.addEventListener('click',(e)=>{
+        e.target.classList.toggle('svg-red');       
+        e.target.classList.toggle('active-menu');
+
+    }) 
+
+});
+
+
+
+
 document.querySelectorAll(".header__user").forEach((element) =>{
     element.addEventListener('click',()=>{
         element.classList.toggle('active-menu');

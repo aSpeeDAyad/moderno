@@ -45,6 +45,7 @@
     font-size: 12px;
 }
 
+
 .header__btn-basket {
     height: 32px;
     width: 32px;
@@ -75,6 +76,13 @@
         margin-right: 20px;
         margin-left: 0;
     }
+    &-main-basket{
+        .header__basket-block-menu{
+            top: 61px;
+            left: -200px;
+        }
+    }
+    
 
 }
 
@@ -140,11 +148,15 @@
 
                 &.active {
                     background-image: url(/images/content/mail-active.png);
+                    
                 }
             }
 
             &.active {
                 background-image: url(/images/content/bell-active.png);
+                
+                
+                
             }
 
             &.arr-back {
@@ -254,7 +266,15 @@
         transition: all 1s;
         max-height: 1000px;
         overflow:hidden;
+        
     }   
+}
+.svg-red{
+    svg{
+       fill:#f28b35 !important;
+    }
+    
+    
 }
 .header {
 
@@ -744,7 +764,6 @@
     &:hover {
         .advantages__item-images {
             background-color: $green;
-
         }
 
         .advantages__item-title {

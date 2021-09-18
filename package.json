@@ -1,7 +1,6 @@
 {
   "name": "start-gulp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,5 +25,14 @@
     "ion-rangeslider": "^2.3.1",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aSpeeDAyad/moderno.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aSpeeDAyad/moderno/issues"
+  },
+  "homepage": "https://github.com/aSpeeDAyad/moderno#readme",
+  "description": ""
 }
