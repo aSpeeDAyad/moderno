@@ -60,17 +60,23 @@ btns.forEach((element) =>{
 });
 
 
-
-
+let hdrUserMenu = document.querySelector(".header__user-menu");
 let hdrUser = document.querySelector(".header__user");
 let hdrUserLogo = document.querySelector(".header__user-logo");
 let hdrUserName = document.querySelector(".header__user-name");
 let hdrUserStatus = document.querySelector(".header__user-status");
 
 hdrUserLogo.addEventListener('click',(e)=>{
-    hdrUser.classList.toggle('active-menu');
+        hdrUser.classList.toggle('active-menu');
 });
+hdrUserMenu.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('header__user-menu')){
+        console.log(e.target);
+    }
+});
+
 hdrUserStatus.addEventListener('click',(e)=>{
+    
     hdrUser.classList.toggle('active-menu');
 });
 let basketItem = document.querySelectorAll('.basket__item-bell');
@@ -78,11 +84,7 @@ let basketItemImg = document.querySelectorAll('.basket__item-bell-imgbell');
 
 basketItem.forEach((element) =>{
     element.addEventListener('click',(e)=>{
-        basketItemImg.classList.toggle('active');
-    });
+       element.lastElementChild.classList.toggle('active');
+    },{once:true});
 });
-// basketItemImg.forEach((element) =>{
-//     element.addEventListener('click',(e)=>{
-//         element.classList.toggle('active');
-//     });
-// });
+

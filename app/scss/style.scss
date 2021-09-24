@@ -149,19 +149,16 @@
                 &.active {
                     background-image: url(/images/content/mail-active.png);
                     
+                    
                 }
+                
             }
 
             &.active {
                 background-image: url(/images/content/bell-active.png);
-                
-                
-                
             }
 
-            &.arr-back {
-                background-image: url(/images/content/back-arrow.png);
-            }
+            
 
         }
 
@@ -260,13 +257,22 @@
 
 
 }
-
+#arrow-deact{
+    background-image: url(/images/content/undo2.svg); 
+    fill:#f28b35 !important;
+    width: 25px; 
+    height:22px;
+background-position: center;    &.active{
+        background-image: url(/images/content/back-arrow.png);
+        width: 25px; 
+        height:22px;
+    }
+}
 .active-menu{
     .header__bell-block-menu, .header__mail-block-menu,.header__user-menu,.header__user, .header__basket-block-menu {
         transition: all 1s;
         max-height: 1000px;
         overflow:hidden;
-        
     }   
 }
 .svg-red{
