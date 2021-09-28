@@ -40,6 +40,54 @@ $(function(){
   
     
 }); 
+
+
+
+let hdrUserMenu = document.querySelector(".header__user-menu");
+let hdrUser = document.querySelector(".header__user");
+let hdrUserLogo = document.querySelector(".header__user-logo");
+let hdrUserName = document.querySelector(".header__user-name");
+let hdrUserStatus = document.querySelector(".header__user-status");
+
+
+
+
+
+document.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    if(e.target.matches('.angle-right a, .header__user-menu ul, .header__user-menu, .angle-right')){
+        e.preventDefault();
+    }
+    else if(e.target.matches('.header__user-name')){
+        e.stopPropagation();
+        hdrUser.classList.toggle('active-menu');
+    }
+    
+    else if(e.target.matches('.header__user-logo')){
+        e.stopPropagation();
+        hdrUser.classList.toggle('active-menu');
+    }
+    else if(e.target.matches('.header__user-status')){
+        e.stopPropagation();
+        hdrUser.classList.toggle('active-menu');
+    }
+    
+    else{
+        hdrUser.classList.remove('active-menu');
+    }
+},false);
+
+
+
+let basketItem = document.querySelectorAll('.basket__item-bell');
+let basketItemImg = document.querySelectorAll('.basket__item-bell-imgbell');
+
+basketItem.forEach((element) =>{
+    element.addEventListener('click',(e)=>{
+       element.lastElementChild.classList.toggle('active');
+    },{once:true});
+});
+
 let btns = document.querySelectorAll(".header__btn-basket");
 let svg = document.querySelectorAll(".svg-menu");
 
@@ -57,34 +105,5 @@ btns.forEach((element) =>{
 
     },false) 
 
-});
-
-
-let hdrUserMenu = document.querySelector(".header__user-menu");
-let hdrUser = document.querySelector(".header__user");
-let hdrUserLogo = document.querySelector(".header__user-logo");
-let hdrUserName = document.querySelector(".header__user-name");
-let hdrUserStatus = document.querySelector(".header__user-status");
-
-hdrUserLogo.addEventListener('click',(e)=>{
-        hdrUser.classList.toggle('active-menu');
-});
-hdrUserMenu.addEventListener('click',(e)=>{
-    if(e.target.classList.contains('header__user-menu')){
-        console.log(e.target);
-    }
-});
-
-hdrUserStatus.addEventListener('click',(e)=>{
-    
-    hdrUser.classList.toggle('active-menu');
-});
-let basketItem = document.querySelectorAll('.basket__item-bell');
-let basketItemImg = document.querySelectorAll('.basket__item-bell-imgbell');
-
-basketItem.forEach((element) =>{
-    element.addEventListener('click',(e)=>{
-       element.lastElementChild.classList.toggle('active');
-    },{once:true});
 });
 
