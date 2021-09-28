@@ -90,6 +90,7 @@ basketItem.forEach((element) =>{
 
 let btns = document.querySelectorAll(".header__btn-basket");
 let svg = document.querySelectorAll(".svg-menu");
+let svgPatch = document.querySelectorAll(".svg-menu patch");
 
 svg.forEach((element) =>{
     element.addEventListener('click',(e)=>{
@@ -97,6 +98,14 @@ svg.forEach((element) =>{
         element.parentElement.classList.toggle('svg-red');
     });    
 });
+svgPatch.forEach((element) =>{
+    element.addEventListener('click',(e)=>{
+        element.parentNode.parentNode.classList.toggle('active-menu'); 
+        element.parentNode.parentNode.classList.toggle('svg-red');
+    }); 
+        
+});
+
 
 btns.forEach((element) =>{
     element.addEventListener('click',(e)=>{
@@ -106,4 +115,14 @@ btns.forEach((element) =>{
     },false) 
 
 });
+
+document.addEventListener('click',(e)=>{
+    e.stopPropagation();
+
+    if(!e.target.matches('.svg-menu patch, .svg-menu, .header__btn-basket, .basket__item-bell, .basket__item-bell-img, .header__bell-block-menu, .basket__item-bell-imgbell, .basket__info, .basket__info-theme, .basket__info-price-bell, .basket__info-name')){
+        btns[0].classList.remove('active-menu', 'svg-red');
+        btns[1].classList.remove('active-menu', 'svg-red');
+        btns[2].classList.remove('active-menu', 'svg-red');
+    }
+}),false;
 
