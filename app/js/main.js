@@ -75,7 +75,7 @@ document.addEventListener('click',(e)=>{
     else{
         hdrUser.classList.remove('active-menu');
     }
-},false);
+});
 
 
 
@@ -92,37 +92,48 @@ let btns = document.querySelectorAll(".header__btn-basket");
 let svg = document.querySelectorAll(".svg-menu");
 let svgPatch = document.querySelectorAll(".svg-menu patch");
 
-svg.forEach((element) =>{
-    element.addEventListener('click',(e)=>{
-        element.parentElement.classList.toggle('active-menu'); 
-        element.parentElement.classList.toggle('svg-red');
-    });    
-});
-svgPatch.forEach((element) =>{
-    element.addEventListener('click',(e)=>{
-        element.parentNode.parentNode.classList.toggle('active-menu'); 
-        element.parentNode.parentNode.classList.toggle('svg-red');
-    }); 
-        
-});
+// svg.forEach((element) =>{
+//     element.addEventListener('click',(e)=>{
+//         element.parentElement.classList.toggle('active-menu'); 
+//         element.parentElement.classList.toggle('svg-red');
+//     });    
+// });
 
 
-btns.forEach((element) =>{
-    element.addEventListener('click',(e)=>{
-        e.target.classList.toggle('svg-red');       
-        e.target.classList.toggle('active-menu');
 
-    },false) 
+// btns.forEach((element) =>{
+//     element.addEventListener('click',(e)=>{
+//         e.target.classList.toggle('svg-red');       
+//         e.target.classList.toggle('active-menu');
+//     }) 
 
-});
+// });
 
 document.addEventListener('click',(e)=>{
     e.stopPropagation();
-
-    if(!e.target.matches('.svg-menu patch, .svg-menu, .header__btn-basket, .basket__item-bell, .basket__item-bell-img, .header__bell-block-menu, .basket__item-bell-imgbell, .basket__info, .basket__info-theme, .basket__info-price-bell, .basket__info-name')){
-        btns[0].classList.remove('active-menu', 'svg-red');
-        btns[1].classList.remove('active-menu', 'svg-red');
-        btns[2].classList.remove('active-menu', 'svg-red');
+    let target = e.target;
+    if(target.classList.contains('header__btn-basket')){
+        btns.forEach((btn) =>{
+            if(target==btn){
+                if(!btn.classList.contains('active-menu','svg-red')){
+                    btns.forEach((item)=>{
+                        item.classList.remove('active-menu','svg-red')
+                    });
+                    btn.classList.add('active-menu','svg-red');
+                }
+                else{
+                    btn.classList.remove('active-menu','svg-red');
+                }
+            }
+              
+        })
     }
-}),false;
+    else{
+         if(!target.classList.contains('close')){
+            btns.forEach((item)=>{
+                item.classList.remove('active-menu','svg-red')
+            });
+        }
+    } 
+});
 

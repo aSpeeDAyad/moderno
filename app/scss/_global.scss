@@ -92,7 +92,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
+  
   .content {
     flex: 1 0 auto;
   }
@@ -109,5 +109,9 @@ body{
           left: 0;
           color: $green;
           font-size: 14px;
-      }
-  }
+        }    
+    }
+}
+path{
+    pointer-events: none;
+}
