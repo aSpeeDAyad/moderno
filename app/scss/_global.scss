@@ -112,6 +112,12 @@ body{
         }    
     }
 }
-path{
+path,svg{
     pointer-events: none;
+}
+
+.test-wrapper{
+    width: 200px;
+    height: 200px;
+    background-color: green;
 }
