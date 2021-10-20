@@ -92,6 +92,13 @@ document.addEventListener('click',(e)=>{
     }
 });
 
+let  headerBtnMenu = document.querySelector(".header__btn-menu");
+let  headerBox = document.querySelector(".header__box");
+
+
+headerBtnMenu.addEventListener('click',()=>{
+    headerBox.classList.toggle('active');
+});
 
 
 let basketItem = document.querySelectorAll('.basket__item-bell');
