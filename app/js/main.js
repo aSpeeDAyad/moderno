@@ -136,9 +136,6 @@ document.addEventListener('click',(e)=>{
                 item.classList.remove('active-menu','svg-red')
             });
         }
-        
-        
-        
     } 
 });
 
