@@ -13,3 +13,8 @@ $bg-cont:#f4f6f5;
     font-family:'Roboto',sans-serif;
     font-weight: 700;
 }
+@mixin bgi{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
