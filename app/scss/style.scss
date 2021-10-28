@@ -1636,71 +1636,83 @@ button.icon-unsorted {
     }
 
 }
-.link-live{
+
+.link-live {
     background-color: $red;
 }
-.link-screenshots{
+
+.link-screenshots {
     background-color: #455a64;
 }
-.link-documentation{
+
+.link-documentation {
     background-color: $green;
 }
 
 .product-one__social {
-    a{
+    a {
         width: 54px;
         height: 50px;
         position: relative;
-        &+a{
+
+        &+a {
             margin-right: 3px;
         }
-        &::before{
+
+        &::before {
             position: absolute;
             font-size: 18px;
             color: #fff;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
     }
 }
-.icon-facebook-f{
+
+.icon-facebook-f {
     background-color: #6370b6;
 }
-.icon-twitter{
+
+.icon-twitter {
     background-color: #64b5f6;
 }
-.icon-linkedin{
+
+.icon-linkedin {
     background-color: #4f71ce;
 }
-.icon-pinterest-p{
-    background-color: #d32f2f;    
+
+.icon-pinterest-p {
+    background-color: #d32f2f;
 }
-.product-one__more-title{
+
+.product-one__more-title {
     background-image: url();
     font-size: 18px;
     @include f500;
     color: $bg;
     padding: 18px 25px;
     background-color: #fff;
-    border:1px solid #dcdcdc;
+    border: 1px solid #dcdcdc;
     margin-bottom: 28px;
 }
-.product-one__more-icons{
+
+.product-one__more-icons {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.productmini__images{
+
+.productmini__images {
     width: 100px;
     margin-right: 20px;
     height: 90px;
-    @include bgi;   
-    
+    @include bgi;
+
 
 }
 
-.productmini{
+.productmini {
     margin-bottom: 27px;
     display: flex;
     max-width: 270px;
@@ -1710,23 +1722,64 @@ button.icon-unsorted {
     align-items: center;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
 }
-.productmini__info{
-    
-}
-.productmini__name{
+
+.productmini__name {
     @include f500;
     font-size: 14px;
     color: $bg;
 }
-.productmini__theme{
+
+.productmini__theme {
     color: $green;
     font-size: 12px;
 }
-.productmini__price{
+
+.productmini__price {
     @include f700;
     font-size: 18px;
     color: $bg;
 }
+
+.product-one__tabs {
+    background-color: #fff;
+    max-height: 325px;
+    height: 100%;
+}
+
+.product-one__tabs__btns {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d7d7d7;
+
+    &-item {
+        width: 100%;
+        text-align: center;
+        @include f500;
+        font-size: 16px;
+        padding: 15px 55px;
+
+        &+& {
+            border-left: 1px solid #d7d7d7;
+        }
+    }
+
+}
+
+.product-one__tabs-content {
+    &-wrapper {
+        text-align: left;
+        column-count:2;
+        column-gap: none;
+        li {
+            margin-left: 54px;
+            margin-bottom: 22px;
+            display: block;
+
+        }
+    }
+
+}
+
 
 
 //end product-one
