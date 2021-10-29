@@ -1742,14 +1742,18 @@ button.icon-unsorted {
 
 .product-one__tabs {
     background-color: #fff;
-    max-height: 325px;
-    height: 100%;
+    height: auto;
+}
+.product-one__more-icon{
+    cursor: pointer;
 }
 
 .product-one__tabs__btns {
     display: flex;
     justify-content: space-between;
     border: 1px solid #d7d7d7;
+    margin-bottom: 30px;
+    cursor: pointer;
 
     &-item {
         width: 100%;
@@ -1761,19 +1765,42 @@ button.icon-unsorted {
         &+& {
             border-left: 1px solid #d7d7d7;
         }
+        &.active{
+           border-bottom: 2px solid $green;
+        }
     }
 
 }
 
 .product-one__tabs-content {
+    display: none;
+    &.active{
+        display: block;
+    }
     &-wrapper {
-        text-align: left;
-        column-count:2;
-        column-gap: none;
+       column-count: 3;
+       column-width: 270px;
+       column-gap: 10px;
+       text-align: left;
+       padding-bottom: 44px;
+       
         li {
             margin-left: 54px;
-            margin-bottom: 22px;
-            display: block;
+            padding-bottom: 22px;
+            display: inline-block;
+            text-align: left;
+            position: relative;
+            padding-right: 1px;
+            
+            &::before {
+                content: '\f105';
+                color: $green;
+                position: absolute;
+                left: -22px;
+                top: -2px;
+                font-size: 18px;
+                font-family: 'icomoon';
+            }
 
         }
     }

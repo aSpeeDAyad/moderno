@@ -27,6 +27,7 @@ body{
     color:$text;
     height: 100%;
     overflow-x: hidden;
+    word-break: break-all;
 }
 .container{
     max-width: 1200px;

@@ -139,3 +139,34 @@ document.addEventListener('click',(e)=>{
     } 
 });
 
+//product-one
+let btnTabs = document.querySelectorAll('.product-one__tabs__btns-item');
+let contentTabs = document.querySelectorAll('.product-one__tabs-content');
+
+btnTabs.forEach((item,i) =>{
+    item.addEventListener('click',(e)=>{
+        
+        btnTabs.forEach((a) =>{
+            a.classList.remove('active'); 
+            
+        });
+
+        
+        e.target.classList.add('active');
+        showTabs (i);
+        
+    })
+});
+
+function showTabs (i){
+    contentTabs.forEach((tab,i) =>{
+        tab.classList.remove('active');
+        
+    });
+    contentTabs[i].classList.add('active');
+    console.log(i); 
+};
+
+  
+    
+
