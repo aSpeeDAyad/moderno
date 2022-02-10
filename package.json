@@ -17,7 +17,7 @@
     "gulp-uglify": "^3.0.2",
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rateyo": "^2.3.5"
   },
   "dependencies": {
